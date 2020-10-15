@@ -290,7 +290,6 @@ func (r *HelmReleaseReconciler) reconcileChart(ctx context.Context, hr *v2.HelmR
 			return nil, false, err
 		}
 		hr.Status.HelmChart = chartName.String()
-		return nil, false, nil
 	}
 
 	return &helmChart, true, nil
